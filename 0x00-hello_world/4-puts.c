@@ -1,8 +1,7 @@
 #!/bin/bash
-#include<stdio.h>
+#include <stdio.h>
 /**
  * main - Put function
- *
  * Return: 0 (success)
  */
 int main(void)
