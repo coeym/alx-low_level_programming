@@ -1,72 +1,36 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
-
 /**
- *  using +1 for null terminator
- *  Seed the random number generator with the current time
- *  Generate a random password
- *  Generate a random ASCII character between 33 and 126
- *  Null-terminate the password string
- *  Print the password
- *  main - Generates random valid passwords for the
- *  program 101-crackme.
- *  Return: Always 0.
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
  */
-
-int main(void)
 int main(void)
 {
-char password[PASSWORD_LENGTH + 1];
+int pass[100];
+int i, sum, n;
+
+sum = 0;	
 
 srand(time(NULL));
 
-for (int i = 0; i < PASSWORD_LENGTH; i++)
+for (i = 0; i < 100; i++)
 {
-password[i] = (char)(rand() % (126 - 33 + 1) + 33);
-}
-password[PASSWORD_LENGTH] = '\0';
-
-printf("Random password: %s\n", password);
-return (0);
-
-char password[84];
-int index = 0, sum = 0, diff_half1, diff_half2;
-
-srand(time(0));
-
-while (sum < 2772)
-
+pass[i] = rand() % 78;
+sum += (pass[i] + '0');
+putchar(pass[i] + '0');
+if ((2772 - sum) - '0' < 78)
 {
-password[index] = 33 + rand() % 94;
-sum += password[index++];
-}
-
-password[index] = '\0';
-
-if (sum != 2772)
-{
-diff_half1 = (sum - 2772) / 2;
-diff_half2 = (sum - 2772) / 2;
-
-if ((sum - 2772) % 2 != 0)															diff_half1++;
-
-for (index = 0; password[index]; index++)
-if (password[index] >= (33 + diff_half1))
-{
-password[index] -= diff_half1;
-break;																																			}
-}
-for (index = 0; password[index]; index++)
-{
-if (password[index] >= (33 + diff_half2))																														{
-password[index] -= diff_half2;
+n = 2772 - sum - '0';
+sum += n;
+putchar(n + '0');
 break;
 }
 }
-}
 
-printf("%s", password);
 return (0);
 }
+
