@@ -20,7 +20,7 @@ c++;
 
 for (c -= 1; c >= 0; c--)
 {
-_putchar(s[c]);
+putchar(s[c]);
 }
-_putchar('\n');
+putchar('\n');
 }
