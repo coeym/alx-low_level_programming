@@ -20,7 +20,7 @@ y++;
 
 for (x = 0; x < y; x += 2)
 {
-_putchar(str[x]);
+putchar(str[x]);
 }
-_putchar('\n');
+putchar('\n');
 }
