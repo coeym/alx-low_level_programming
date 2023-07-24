@@ -29,7 +29,7 @@ y = x / 2;
 
 for (; y < x; y++)
 {
-_putchar(str[y]);
+putchar(str[y]);
 }
-_putchar('\n');
+putchar('\n');
 }
