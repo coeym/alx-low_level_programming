@@ -1,6 +1,32 @@
 #include "main.h"
 
 /**
+ * rev_string - reverse array
+ * @n: integer
+ * Return: Always 0
+ */
+
+void rev_string(char *n)
+{
+int i = 0;
+int j = 0;
+char temp;
+
+while (*(n + i) != '\0')
+{
+i++;
+}
+i--;
+
+for (j = 0; j < i; j++, i--)
+{
+temp = *(n + j);
+*(n + j) = *(n + i);
+*(n + i) = temp;
+}
+}
+
+/**
  * infinite_add - add 2 numbers together
  * @n1: first number to be added
  * @n2: second number to be added
@@ -47,5 +73,6 @@ i--;
 if (digits == size_r)
 return (0);
 *(r + digits) = '\0';
+rev_string(r);
 return (r);
 }
