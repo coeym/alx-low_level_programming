@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * _strpbrk - function that searches 
@@ -12,17 +11,16 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-int p;
+int p, y;
 
-while (*s)
+for (p = 0; s[p] != '\0'; p++)
 {
-for (p = 0; accept[p]; p++)
+for (y = 0; accept[y] != '\0'; y++)
 {
-if (*s == accept[p])
-return (s);
+if (s[p] == accept[y])
+return (s + p);
 }
-s++;
 }
-return ('\0');
+return (NULL);
 }
 
