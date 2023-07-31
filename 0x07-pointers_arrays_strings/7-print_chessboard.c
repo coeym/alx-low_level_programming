@@ -6,7 +6,7 @@
  * Return: Always 0
  */
 
-void _putchar();
+void _putchar(void);
 
 void print_chessboard(char (*a)[8])
 {
