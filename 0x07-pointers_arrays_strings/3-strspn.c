@@ -13,7 +13,7 @@ unsigned int x, n, p, y;
 
 p = 0;
 
-for (x = 0; s[x] != '\0';x++)
+for (x = 0; s[x] != '\0'; x++)
 {
 y = 0;
 
@@ -27,7 +27,7 @@ y = 1;
 }
 
 if (y == 0)
-return(p);
+return (p);
 }
 
 return (p);
