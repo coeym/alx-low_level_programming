@@ -9,15 +9,15 @@
  */
 
 int _sqrt_recursion(int n)
-{
-int sqrt = n * n;
 
-if (sqrt == n)
 {
-return (n);
-}
-else
+int p;
+if (p * p > n)
 {
 return (-1);
+}
+if (p * p == n)
+{
+return (p);
 }
 }
