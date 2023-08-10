@@ -16,6 +16,11 @@ unsigned int q = 0;
 unsigned int m = 0;
 unsigned int j = 0;
 
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+
 while (s1[p])
 p++;
 
