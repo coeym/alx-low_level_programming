@@ -20,28 +20,22 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-
 while (s1[p])
 p++;
-
 while (s2[m])
 m++;
-
 if (n >= m)
 j = p + m;
 else
 j = p + n;
-
 s = malloc(sizeof(char) * j + 1);
 if (s == NULL)
 return (NULL);
-
 m = 0;
 while (q < j)
 {
 if (q <= p)
 s[q] = s1[q];
-
 if (q >= p)
 {
 s[q] = s2[m];
