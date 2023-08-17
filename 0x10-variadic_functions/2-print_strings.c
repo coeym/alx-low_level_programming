@@ -9,7 +9,7 @@
   * @n: number of strings
   * ...: a variable
   * Return: If separator is NULL, nothing
-  * If one of the strings if NULL, (nil) 
+  * If one of the strings if NULL, (nil)
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
