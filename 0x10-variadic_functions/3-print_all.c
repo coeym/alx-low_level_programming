@@ -77,7 +77,7 @@ printf("%s%f", separator, va_arg(args, double));
 }
 
 /**
-  * print_a_char_ptr - Prints pointer to char 
+  * print_a_char_ptr - Prints pointer to char
   * @separator: separator
   * @args: variadic arguments
   * Return: Nothing
