@@ -5,7 +5,7 @@
  * @file_to: file_to argument
  * @ff: ff arg
  * @ft: ft arg
-88 */
+ */
 void op_file(char *file_from, char *file_to, int ff, int ft)
 {
 ff = open(file_from, O_RDONLY);
@@ -31,7 +31,7 @@ char buffer[1024];
 ff = open(file_from, O_RDONLY);
 if (!ff)
 {
-	
+
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 exit(98);
 }
